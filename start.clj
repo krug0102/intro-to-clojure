@@ -260,7 +260,12 @@
 ;; Task 14 (5 points): write and test a recursive function that takes a list and returns
 ;; the same list with the last element replaced by 5. The empty list should remain unchanged.
 
-
+(defn replaceLast [l]
+  (if (empty? l)
+    l
+    (if (empty? (rest l))
+      (cons (first l) 5)
+      (cons (first l) (replaceLast (rest l))))))
 
 ;; Task 15 (8 points): read about Clojure maps and sets and write at least 4 examples
 ;; of using each of them, demonstrating different operations. Explain in comments what happens.
