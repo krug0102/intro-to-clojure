@@ -264,7 +264,7 @@
   (if (empty? l)
     l
     (if (empty? (rest l))
-      (cons (first l) 5)
+      '(5)
       (cons (first l) (replaceLast (rest l))))))
 
 ;; Task 15 (8 points): read about Clojure maps and sets and write at least 4 examples
